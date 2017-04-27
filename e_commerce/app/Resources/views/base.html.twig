@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset ('css/bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset ('css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset ('css/font-awesome.css') }}" />
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+      <!-- Fixed navbar -->
+    <div class="navbar navbar-fixed-top col-sm-offset-2">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="nav-collapse">
+          <span id="TitreOfeCommerce"><a href="{{ path('produits') }}">Burger place</a></span>
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
+            <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+<!-- Content -->
+<div>
+
+<div class="container-fluid containerInformation">
+          <ul id="sidebar" class="nav nav-stacked affix col-sm-2">
+            <li><a href="#">Nos burgers</a></li>
+            <li><a href="#">Nos pizzas</a></li>
+            <li><a href="#">Nos accompagnements</a></li>
+            <li><a href="#">Nos desserts</a></li>
+            <li><a href="#">Nos menus </a></li>
+            <li><a href="#">Nos promotions</a></li>
+        </ul>
+      {% block body %}{% endblock %}
+</div>
+
+
+      <hr class="col-sm-offset-2 col-sm-10">
+      	<footer id="footer" class="vspace20 row col-sm-offset-2">
+      		<div class="container">
+      			<div class="row">
+      				<div class="col-sm-4">
+      					<h4>Informations</h4>
+      					<ul class="nav nav-stacked">
+      						<li><a href="#">CGV</a>
+      						<li><a href="#">Mentions légales</a>
+      					</ul>
+      				</div>
+
+      				<div class="col-sm-4">
+      					<h4>Notre entrepôt</h4>
+      					<p><i class="glyphicon glyphicon-map-marker"></i>&nbsp;Lyon 69 007 - ingèsup</p>
+      				</div>
+
+      				<div class="col-sm-4">
+      					<h4>Nous contacter</h4>
+      					<p><i class="glyphicon glyphicon-earphone"></i>&nbsp;Tel: 02 35 00 00 00</p>
+      					<p><i class="glyphicon glyphicon-print"></i>&nbsp;Fax: 02 35 00 00 00</p>
+      				</div>
+      			</div>
+
+      			<div class="row">
+      				<div class="col-sm-4">
+      					<p>&copy; Copyright 2014 - Ingèsup</p>
+      				</div>
+      			</div>
+      		</div>
+      	</footer>
+      	<script src="{{ asset ('js/jquery-1.10.0.min.js') }}"></script>
+      	<script src="{{ asset ('js/bootstrap.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+  </body>
+</html>

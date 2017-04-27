@@ -1,0 +1,15 @@
+produits:
+    path:     /
+    defaults: { _controller: EcommerceBundle:Produits:produits }
+
+presentation:
+    path:     /produit
+    defaults: { _controller: EcommerceBundle:Produits:presentation }
+
+panier:
+    path:     /panier
+    defaults: { _controller: EcommerceBundle:Panier:panier }
+
+adminProduits:
+    path:     /admin/produits
+    defaults: { _controller: EcommerceBundle:AdminProduits:adminProduits }

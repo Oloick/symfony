@@ -1,0 +1,37 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="container-fluid col-sm-offset-2 containerPresentation">
+  <div class="row">
+    <div class="col-sm-12 rage">
+        <div id="collapseOne" class="accordion-body collapse in">
+            <div class="accordion-inner">
+                <div class="col-sm-4 col-sm-offset-2">
+                  <div class="text-center">
+                    <div class="logo"><h2>Register</h2></div>
+                    <!-- Main Form -->
+                    <div class="login-form-1">
+                    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register text-left', 'id':'register-form'}}) }}
+                    <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                            <div class="login-group">
+                                    {{ form_widget(form, {'attr': {'class':'newClass'}}) }}
+                                    <div class="form-group login-group-checkbox">
+                                        <input type="checkbox" class="" id="reg_agree" name="reg_agree">
+                                        <label for="reg_agree">i agree with <a href="#">terms</a></label>
+                                    </div>
+                            </div>
+                            <button type="submit" value="{{ 'registration.submit'|trans }}" class="login-button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                        </div>
+                        <div class="etc-login-form">
+                            <p>already have an account? <a href="{{ path('fos_user_security_login') }}">login here</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{{ form_end(form) }}

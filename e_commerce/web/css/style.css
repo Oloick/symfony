@@ -1,0 +1,442 @@
+body {
+	padding-bottom: 40px;
+    padding-top: 60px;
+    overflow-x: hidden;
+}
+
+#thumbnail-preview-indicators {
+    margin-top: -19px;
+    position: relative;
+    overflow: hidden;
+}
+#thumbnail-preview-indicators .slides .slide-1,
+#thumbnail-preview-indicators .slides .slide-2,
+#thumbnail-preview-indicators .slides .slide-3 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+    #thumbnail-preview-indicators,
+    #thumbnail-preview-indicators .slides,
+    #thumbnail-preview-indicators .slides .slide-1,
+    #thumbnail-preview-indicators .slides .slide-2,
+    #thumbnail-preview-indicators .slides .slide-3 {
+      height: 480px;
+    }
+#thumbnail-preview-indicators .slides .slide-1 {
+  background-image: url(https://s3.amazonaws.com/ooomf-com-files/wdXqHcTwSTmLuKOGz92L_Landscape.jpg);
+}
+#thumbnail-preview-indicators .slides .slide-2 {
+  background-image: url(https://s3.amazonaws.com/ooomf-com-files/tU3ptNgGSP6U2fE67Gvy_SYDNEY-162.jpg);
+}
+#thumbnail-preview-indicators .slides .slide-3 {
+  background-image: url(https://s3.amazonaws.com/ooomf-com-files/mtNrf7oxS4uSxTzMBWfQ_DSC_0043.jpg);
+}
+#thumbnail-preview-indicators .carousel-inner .item .carousel-caption {
+  top: 20%;
+  bottom: inherit;
+}
+#thumbnail-preview-indicators .carousel-indicators li,
+#thumbnail-preview-indicators .carousel-indicators li.active {
+  position: relative;
+  width: 100px;
+  height: 8px;
+}
+#thumbnail-preview-indicators .carousel-indicators li > .thumbnail {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  display: none;
+  opacity: 0;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -50px;
+}
+#thumbnail-preview-indicators .carousel-indicators li:hover > .thumbnail,
+#thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail {
+  display: block;
+  opacity: .8;
+}
+#thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail:hover{
+  opacity: 1;
+}
+@media screen and (max-width : 480px) {
+    #thumbnail-preview-indicators .carousel-indicators li,
+    #thumbnail-preview-indicators .carousel-indicators li.active {
+      width: 50px;
+      height: 8px;
+      position: relative;
+    }
+    #thumbnail-preview-indicators .carousel-indicators li > .thumbnail {
+       width: 50px;
+       left: 50%;
+       margin-top: -50px;
+       margin-left: -25px;
+    }
+}
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+ul#sidebar {
+    min-height: 100%;
+    background-color: #222222;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    padding-top: 5%;
+}
+
+span#TitreOfeCommerce {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 40%;
+}
+
+ul.thumbnails.row {
+    list-style-type: none;
+}
+.doubleBoutonThumbnail {
+    display: inline-flex;
+}
+
+.row.paginationRow {
+    text-align: center;
+    margin-left: -5px;
+}
+
+.containerPresentation{
+  padding-left: 2%;
+}
+
+input.form-control.input-number {
+    text-align: center;
+}
+
+form.presentationPanier {
+    display: inline-flex;
+}
+
+hr{
+   display: block;
+   position: relative;
+   padding: 10px;
+   margin-top: 4%;
+   opacity: 0.5;
+   height: 0;
+   width: 100%;
+   max-height: 0;
+   font-size: 1px;
+   line-height: 0;
+   clear: both;
+   border: none;
+   border-top: 1px solid #aaaaaa;
+   border-bottom: 1px solid #ffffff;
+}
+
+
+/* connexion - Inscription */
+/*=== 3. Text Outside the Box ===*/
+.etc-login-form {
+  color: #919191;
+  padding: 10px 20px;
+}
+.etc-login-form p {
+  margin-bottom: 5px;
+}
+/*=== 4. Main Form ===*/
+.login-form-1 {
+  max-width: 300px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.main-login-form {
+  position: relative;
+}
+.login-form-1 .form-control {
+  border: 0;
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  background: transparent;
+  color: #555555;
+  padding: 7px 0;
+  font-weight: bold;
+  height:auto;
+}
+.login-form-1 .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-control:-moz-placeholder,
+.login-form-1 .form-control::-moz-placeholder,
+.login-form-1 .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-group {
+  margin-bottom: 0;
+  border-bottom: 2px solid #efefef;
+  padding-right: 20px;
+  position: relative;
+}
+.login-form-1 .form-group:last-child {
+  border-bottom: 0;
+}
+.login-group {
+  background: #ffffff;
+  color: #999999;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.login-group-checkbox {
+  padding: 5px 0;
+}
+/*=== 5. Login Button ===*/
+.login-form-1 .login-button {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  background: #ffffff;
+  color: #999999;
+  padding: 11px 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border: 5px solid #efefef;
+  border-radius: 50%;
+  transition: all ease-in-out 500ms;
+}
+.login-form-1 .login-button:hover {
+  color: #555555;
+  transform: rotate(450deg);
+}
+.login-form-1 .login-button.clicked {
+  color: #555555;
+}
+.login-form-1 .login-button.clicked:hover {
+  transform: none;
+}
+.login-form-1 .login-button.clicked.success {
+  color: #2ecc71;
+}
+.login-form-1 .login-button.clicked.error {
+  color: #e74c3c;
+}
+/*=== 6. Form Invalid ===*/
+label.form-invalid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  display: block;
+  margin-top: -25px;
+  padding: 7px 9px;
+  background: #777777;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+label.form-invalid:after {
+  top: 100%;
+  right: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: #777777;
+  border-width: 6px;
+}
+/*=== 7. Form - Main Message ===*/
+.login-form-main-message {
+  background: #ffffff;
+  color: #999999;
+  border-left: 3px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  height: 0;
+  padding: 0 20px 0 17px;
+  opacity: 0;
+  transition: all ease-in-out 200ms;
+}
+.login-form-main-message.show {
+  height: auto;
+  opacity: 1;
+  padding: 10px 20px 10px 17px;
+}
+.login-form-main-message.success {
+  border-left-color: #2ecc71;
+}
+.login-form-main-message.error {
+  border-left-color: #e74c3c;
+}
+/*=== 8. Custom Checkbox & Radio ===*/
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  padding-top: 1px;
+  cursor: pointer;
+}
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 17px;
+  height: 17px;
+  border: 0px solid #aaa;
+  background: #f0f0f0;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  position: absolute;
+  color: #555555;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after,
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after,
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before,
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #8c8c8c;
+  background-color: #878787;
+}
+[type="checkbox"]:disabled:checked + label:after,
+[type="radio"]:disabled:checked + label:after {
+  color: #555555;
+}
+[type="checkbox"]:disabled + label,
+[type="radio"]:disabled + label {
+  color: #8c8c8c;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before,
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted #f6f6f6;
+}
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #f6f6f6 !important;
+}
+/*=== Customization ===*/
+/* radio aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  border-radius: 3px;
+}
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  border-radius: 35px;
+}
+/* selected mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  top: 0;
+  left: 2px;
+  font-size: 14px;
+}
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  content: '\2022';
+  top: 0;
+  left: 3px;
+  font-size: 30px;
+  line-height: 25px;
+}
+/*=== 9. Misc ===*/
+.logo {
+  padding: 15px 0;
+  font-size: 25px;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+
+.rage [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}

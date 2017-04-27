@@ -1,0 +1,114 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<div class="container-fluid col-sm-offset-2 containerPresentation">
+  <div class="row">
+    <div class="col-sm-12 rage">
+        <div id="collapseOne" class="accordion-body collapse in">
+            <div class="accordion-inner">
+                <div class="col-sm-4">
+                  <div class="text-center">
+                    <div class="logo"><h2>Add produits</h2></div>
+                    <!-- Main Form -->
+                    <div class="login-form-1">
+                      <form id="login-form" class="text-left">
+                        <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                          <div class="login-group">
+                            <div class="form-group">
+                              <label for="lg_name" class="sr-only">Name</label>
+                              <input type="text" class="form-control" id="lg_name" name="lg_name" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_categorie" class="sr-only">Categorie</label>
+                              <input type="text" class="form-control" id="lg_categorie" name="lg_categorie" placeholder="categorie">
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_description" class="sr-only">Description</label>
+                              <textarea type="text" class="form-control" id="lg_description" name="lg_description" placeholder="description"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_prix" class="sr-only">Prix</label>
+                              <input type="text" class="form-control" id="lg_prix" name="lg_prix" placeholder="prix">
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_quantite" class="sr-only">Quantite</label>
+                              <input type="text" class="form-control" id="lg_quantite" name="lg_quantite" placeholder="quantite">
+                            </div>
+                          </div>
+                          <button type="submit" class="login-button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- end:Main Form -->
+                    </div>
+                </div>
+                <!-- Deleteproduits-->
+                <div class="col-sm-4">
+                  <div class="text-center">
+                    <div class="logo"><h2>Supp produits</h2></div>
+                    <!-- Main Form -->
+                    <div class="login-form-1">
+                      <form id="login-form" class="text-left">
+                        <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                          <div class="login-group">
+                            <div class="form-group">
+                              <label for="lg_name" class="sr-only">Name</label>
+                              <input type="text" class="form-control" id="lg_name" name="lg_name" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_categorie" class="sr-only">Categorie</label>
+                              <input type="text" class="form-control" id="lg_categorie" name="lg_categorie" placeholder="categorie">
+                            </div>
+                          </div>
+                          <button type="submit" class="login-button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- end:Main Form -->
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="text-center">
+                    <div class="logo"><h2>Modif produits</h2></div>
+                    <!-- Main Form -->
+                    <div class="login-form-1">
+                      <form id="login-form" class="text-left">
+                        <div class="login-form-main-message"></div>
+                        <div class="main-login-form">
+                          <div class="login-group">
+                            <div class="form-group">
+                              <label for="lg_name" class="sr-only">Name</label>
+                              <input type="text" class="form-control" id="lg_name" name="lg_name" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_categorie" class="sr-only">Categorie</label>
+                              <input type="text" class="form-control" id="lg_categorie" name="lg_categorie" placeholder="categorie">
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_description" class="sr-only">Description</label>
+                              <textarea type="text" class="form-control" id="lg_description" name="lg_description" placeholder="description"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_prix" class="sr-only">Prix</label>
+                              <input type="text" class="form-control" id="lg_prix" name="lg_prix" placeholder="prix">
+                            </div>
+                            <div class="form-group">
+                              <label for="lg_quantite" class="sr-only">Quantite</label>
+                              <input type="text" class="form-control" id="lg_quantite" name="lg_quantite" placeholder="quantite">
+                            </div>
+                          </div>
+                          <button type="submit" class="login-button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- end:Main Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
