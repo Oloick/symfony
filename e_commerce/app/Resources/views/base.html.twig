@@ -34,12 +34,12 @@
 
 <div class="container-fluid containerInformation">
           <ul id="sidebar" class="nav nav-stacked affix col-sm-2">
-            <li><a href="#">Nos burgers</a></li>
-            <li><a href="#">Nos pizzas</a></li>
-            <li><a href="#">Nos accompagnements</a></li>
-            <li><a href="#">Nos desserts</a></li>
-            <li><a href="#">Nos menus </a></li>
-            <li><a href="#">Nos promotions</a></li>
+            <li><a href="{{ path('categoriesProduits', { 'categorie': 'burger' })}}">Nos burgers</a></li>
+            <li><a href="{{ path('categoriesProduits', { 'categorie': 'pizza' })}}">Nos pizzas</a></li>
+            <li><a href="{{ path('categoriesProduits', { 'categorie': 'accompagnement' })}}">Nos accompagnements</a></li>
+            <li><a href="{{ path('categoriesProduits', { 'categorie': 'dessert' })}}">Nos desserts</a></li>
+            <li><a href="{{ path('categoriesProduits', { 'categorie': 'menu' })}}">Nos menus </a></li>
+            <li><a href="{{ path('categoriesProduits', { 'categorie': 'promotion' })}}">Nos promotions</a></li>
         </ul>
       {% block body %}{% endblock %}
 </div>

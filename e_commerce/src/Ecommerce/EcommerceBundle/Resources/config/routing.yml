@@ -3,8 +3,10 @@ produits:
     defaults: { _controller: EcommerceBundle:Produits:produits }
 
 presentation:
-    path:     /produit
+    path:     /produit/{id}
     defaults: { _controller: EcommerceBundle:Produits:presentation }
+    requirements:
+        id: '\d+'
 
 panier:
     path:     /panier
@@ -13,3 +15,9 @@ panier:
 adminProduits:
     path:     /admin/produits
     defaults: { _controller: EcommerceBundle:AdminProduits:adminProduits }
+
+categoriesProduits:
+    path:     /produits/{categorie}
+    defaults: { _controller: EcommerceBundle:Produits:categories }
+    requirements:
+        categorie: "[a-zA-Z]+"
