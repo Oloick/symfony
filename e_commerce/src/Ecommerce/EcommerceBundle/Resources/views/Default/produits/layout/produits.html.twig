@@ -35,7 +35,12 @@
                             <p> {{produit.prix }} €</p>
                             <div class="doubleBoutonThumbnail">
                                 <a class="btn btn-primary" href="{{ path('presentation' , { 'id': produit.id } )}}">Plus d'infos &nbsp;</a>
-                                <a class="btn btn-success" href="{{ path('panier') }}">Ajouter au panier</a>
+                                {% if is_granted("ROLE_USER") %}
+                                    <a class="btn btn-success" href="{{ path('panier', {'id' : produit.id }) }}">Ajouter au panier</a>
+                                {% else %}
+                                    <a class="btn btn-success" href="{{ path('fos_user_security_login') }}">Ajouter au panier</a>
+                                {% endif %}
+
                             </div>
                         </div>
                     </div>

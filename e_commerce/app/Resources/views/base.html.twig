@@ -21,8 +21,13 @@
         <div class="nav-collapse">
           <span id="TitreOfeCommerce"><a href="{{ path('produits') }}">Burger place</a></span>
           <ul class="nav navbar-nav pull-right">
-            <li><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
-            <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+            {% if is_granted("ROLE_USER") %}
+              <li><a href="#"> Bonjour {{ app.user.username }} !</a></li>
+            {% else %}
+              <li><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
+              <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+            {% endif %}
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -34,13 +39,22 @@
 
 <div class="container-fluid containerInformation">
           <ul id="sidebar" class="nav nav-stacked affix col-sm-2">
+            {% if is_granted("ROLE_USER") %}
+              <li><a  href="{{ path('panierAffiche') }}"><span class="glyphicon glyphicon-list-alt"></span> Votre panier </a></li>
+            {% endif %}
+            <li> </br> </li>
             <li><a href="{{ path('categoriesProduits', { 'categorie': 'burger' })}}">Nos burgers</a></li>
             <li><a href="{{ path('categoriesProduits', { 'categorie': 'pizza' })}}">Nos pizzas</a></li>
             <li><a href="{{ path('categoriesProduits', { 'categorie': 'accompagnement' })}}">Nos accompagnements</a></li>
             <li><a href="{{ path('categoriesProduits', { 'categorie': 'dessert' })}}">Nos desserts</a></li>
             <li><a href="{{ path('categoriesProduits', { 'categorie': 'menu' })}}">Nos menus </a></li>
             <li><a href="{{ path('categoriesProduits', { 'categorie': 'promotion' })}}">Nos promotions</a></li>
+            {% if is_granted("ROLE_USER") %} <!-- ROLE_ADMIN -->
+              <li> <hr> </li>
+              <li><a  href=" {{ path('adminProduits')  }}"><span class="glyphicon glyphicon-cog"></span> Configuration produits</a></li>
+            {% endif %}
         </ul>
+        <br>
       {% block body %}{% endblock %}
 </div>
 

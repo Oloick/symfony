@@ -35,7 +35,7 @@
                             <p> {{produit.prix }} €</p>
                             <div class="doubleBoutonThumbnail">
                                 <a class="btn btn-primary" href="{{ path('presentation' , { 'id': produit.id } )}}">Plus d'infos &nbsp;</a>
-                                <a class="btn btn-success" href="{{ path('panier') }}">Ajouter au panier</a>
+                                <a class="btn btn-success" href="{{ path('panier', {'id': produit.id} )}}">Ajouter au panier</a>
                             </div>
                         </div>
                     </div>

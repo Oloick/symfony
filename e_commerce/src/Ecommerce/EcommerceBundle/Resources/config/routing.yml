@@ -9,12 +9,24 @@ presentation:
         id: '\d+'
 
 panier:
-    path:     /panier
+    path:     /panier/{id}
     defaults: { _controller: EcommerceBundle:Panier:panier }
+    requirements:
+        id: '\d+'
+
+panierAffiche:
+    path:     /panier
+    defaults: { _controller: EcommerceBundle:Panier:panierAffiche }
 
 adminProduits:
     path:     /admin/produits
     defaults: { _controller: EcommerceBundle:AdminProduits:adminProduits }
+
+adminSuppProduit:
+    path:     /admin/produits/del/{id}
+    defaults: { _controller: EcommerceBundle:AdminProduits:adminSuppProduit }
+    requirements:
+        id: '\d+'
 
 categoriesProduits:
     path:     /produits/{categorie}

@@ -18,13 +18,30 @@ class AdminProduitsController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            var_dump($produits);
             $em = $this->getDoctrine()->getManager();
             $em->persist($produits);
             $em->flush();
-
-            return $this->render('EcommerceBundle:Administration:produits/layout/produits.html.twig', array('form' => $form->createView()));
         }
-    return $this->render('EcommerceBundle:Administration:produits/layout/produits.html.twig', array('form' => $form->createView()));
+        $em = $this->getDoctrine()->getManager();
+        $produitsAffiches = $em->getRepository('EcommerceBundle:Produits')->findAll();
+        return $this->render('EcommerceBundle:Administration:produits/layout/produits.html.twig', array(
+            'produits' => $produitsAffiches,
+            'form' => $form->createView()));
+    }
+
+    public function adminSuppProduitAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $produit = $em->getRepository('EcommerceBundle:Produits')->find($id);
+
+        if (!$produit) {
+            alert(" Erreur ");
+        }
+
+        $em->remove($produit);
+        $em->flush();
+
+        return $this->redirectToRoute('adminProduits');
     }
 }
